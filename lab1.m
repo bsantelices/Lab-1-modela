@@ -17,14 +17,14 @@ fprintf('Graficando funciones a(x) y b(x): \n')
 graficarDosFunciones(a,b,x);
 
 %1.2
-x = -10:10;                 %Variable de entrada x
+x = -10:.05:10;                 %Variable de entrada x
 c = terceraFuncion(x);      %Función c(x)
 
 %Bloque para graficar
 fprintf('Graficando función c(x): \n')
-graficar(c,x,'Funcion c(x) en intervalo [-10, 10]','x','6 * exp(x+18)','--bs');
+graficar(c,x,'Funcion c(x) en intervalo [-10, 10]','x','6 * exp(x+18)','--m');
 fprintf('Graficando función c(x) logaritmica: \n')
-graficaLogaritmica(c,x,'Funcion c(x) escala logaritmica en [-10, 10]','x','6 * exp(x+18)','--r');
+graficaLogaritmica(c,x,'Funcion c(x) escala logaritmica en [-10, 10]','x','6 * exp(x+18)','--b');
 
 
 %% Segunda parte %%
@@ -139,7 +139,8 @@ function [] = graficarDosFunciones(f,g,x)
     % Se grafica la segunda funcion
     plot(x, g, '+g')
     legend('8log5(4x + 12)', 'sen(6(log2(x + 9))) + cos(7(log6(4x + 32)))', 'Location', 'northwest')
-    
+    yline(0);
+    grid on
     hold off
     
 end

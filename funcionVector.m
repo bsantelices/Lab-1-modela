@@ -31,5 +31,5 @@ function [] = vector()
     A = sqrt(sum(maximos));
     B = sqrt(sum(minimos));
     %Resta
-    C = A-B;
+    C = A-B
 end
